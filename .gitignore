@@ -29,7 +29,7 @@ var/
 .vscode/
 
 # Django specific
-db.sqlite3
+*db.sqlite3
 /staticfiles/
 /mediafiles/
 /node_modules/
