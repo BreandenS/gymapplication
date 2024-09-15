@@ -1,0 +1,48 @@
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+*.log
+*.pot
+*.mo
+*.cache
+*.coverage
+*.cover
+*.log
+*.sql
+*.sqlite3
+
+# Environment settings
+.env
+.env.local
+.env.*.local
+.vscode/
+
+# Django specific
+*db.sqlite3
+/staticfiles/
+/mediafiles/
+/node_modules/
+/migrations/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
