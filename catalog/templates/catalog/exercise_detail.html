@@ -1,0 +1,18 @@
+<!-- templates/exercises/exercise_detail.html -->
+<h1>{{ exercise.name }}</h1>
+<p><strong>Category:</strong> {{ exercise.category.name }}</p>
+<p><strong>Target Muscles:</strong>
+    {% for muscle in exercise.target_muscles.all %}
+        {{ muscle.name }}{% if not forloop.last %}, {% endif %}
+    {% endfor %}
+</p>
+<p><strong>Description:</strong> {{ exercise.description }}</p>
+{% if exercise.equipment %}
+    <p><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+{% endif %}
+{% if exercise.video_url %}
+    <p><a href="{{ exercise.video_url }}">Watch Video</a></p>
+{% endif %}
+{% if exercise.image %}
+    <img src="{{ exercise.image.url }}" alt="{{ exercise.name }}">
+{% endif %}

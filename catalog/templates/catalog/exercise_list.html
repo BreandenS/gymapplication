@@ -1,0 +1,9 @@
+<!-- templates/exercises/exercise_list.html -->
+<h1>Exercise Catalog</h1>
+<ul>
+    {% for exercise in exercises %}
+        <li>
+            <a href="{% url 'exercise_detail' exercise.pk %}">{{ exercise.name }}</a> - {{ exercise.category.name }}
+        </li>
+    {% endfor %}
+</ul>
