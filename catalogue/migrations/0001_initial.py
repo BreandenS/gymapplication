@@ -67,10 +67,10 @@ class Migration(migrations.Migration):
                     "category",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="catalog.category",
+                        to="catalogue.category",
                     ),
                 ),
-                ("target_muscles", models.ManyToManyField(to="catalog.musclegroup")),
+                ("target_muscles", models.ManyToManyField(to="catalogue.musclegroup")),
             ],
         ),
     ]

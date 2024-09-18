@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     #own
     "users.apps.UsersConfig",
-    "catalog",
+    "catalogue",
     
     
     
