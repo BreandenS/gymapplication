@@ -46,3 +46,33 @@ def logout_view(request):
     logout(request)
     messages.success(request, "You have been logged out.")
     return redirect('login')
+
+
+
+
+
+# users/views.py
+from django.shortcuts import render, redirect
+from .models import MemberProfile
+from .forms import MemberProfileForm
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def view_profile(request):
+    profile = MemberProfile.objects.get(user=request.user)
+    return render(request, 'users/profile/view_profile.html', {'profile': profile})
+
+@login_required
+def edit_profile(request):
+    profile = MemberProfile.objects.get(user=request.user)
+    
+    if request.method == 'POST':
+        form = MemberProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            return redirect('view_profile')
+    else:
+        form = MemberProfileForm(instance=profile)
+    
+    return render(request, 'users/profile/edit_profile.html', {'form': form})
+

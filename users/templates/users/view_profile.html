@@ -1,0 +1,13 @@
+
+<h2>{{ profile.full_name }}'s Profile</h2>
+<ul>
+    <li>Full Name: {{ profile.full_name }}</li>
+    <li>Date of Birth: {{ profile.date_of_birth }}</li>
+    <li>Age: {{ profile.age }}</li>
+    <li>Gender: {{ profile.gender }}</li>
+    <li>Phone Number: {{ profile.phone_number }}</li>
+    <li>Bank Account Number: {{ profile.bank_account_number }}</li>
+    <li>Bank Name: {{ profile.bank_name }}</li>
+</ul>
+
+<a href="{% url 'edit_profile' %}">Edit Profile</a>
