@@ -1,8 +1,8 @@
 # users/forms.py
 from django import forms
-from .models import MemberProfile
+from .models import Profile
 
 class MemberProfileForm(forms.ModelForm):
     class Meta:
-        model = MemberProfile
-        fields = ['full_name', 'date_of_birth', 'age', 'gender', 'phone_number', 'bank_account_number', 'bank_name']
+        model = Profile
+        #fields = ['full_name', 'date_of_birth', 'age', 'gender', 'phone_number', 'bank_account_number', 'bank_name']
